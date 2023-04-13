@@ -1,31 +1,29 @@
-// import * as React from "react";
-// import { View, Text } from "react-native";
-
-// function HomeScreen() {
-//   return (
-//     //   <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-//     <View className="bg-black">
-//       <Text  className='bg-black'>Home Screen</Text>
-//     </View>
-//   );
-// }
-
-// export default HomeScreen;
-
-
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Text, View } from "react-native";
+import { SafeAreaView, Text, StyleSheet, ScrollView } from "react-native";
+import { AntDesign } from "@expo/vector-icons";
 
 function HomeScreen() {
-
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className=''>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView className="flex-1 bg-white">
+      <ScrollView style={styles.container}>
+        <Text>Hi, James Roland</Text>
+        <AntDesign
+          name="login"
+          size={24}
+          color="black"
+        />
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
-export default HomeScreen;
+const styles = StyleSheet.create({
+  container: {
+    display: "flex",
+    flexDirection: "row",
+    // justifyContent: 'space-between',
 
+    backgroundColor: "pink",
+  },
+});
+export default HomeScreen;
